@@ -1,25 +1,66 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import "leaflet/dist/leaflet.css";
+import Header from "./Header";
+import MapView from "./MapView";
+import NewsModal from "./NewsModal";
+import {  fetchIncidents, fetchNews, fetchUserLocation } from "./services/api";
 
-function App() {
+const App = () => {
+  const [userLocation, setUserLocation] = useState(null);
+  const [news, setNews] = useState([]);
+  const [incidents, setIncidents] = useState([]);
+  const [isNewsModalOpen, setIsNewsModalOpen] = useState(false);
+
+  useEffect(() => {
+    const initializeData = async () => {
+      try {
+        const location = await fetchUserLocation();
+        setUserLocation(location); 
+
+        const incidentsData = await fetchIncidents();
+         
+        setIncidents(incidentsData);
+        
+
+        if (location.city) {
+          const newsData = await fetchNews(location.city);
+          const filteredNews = newsData.filter(
+            (article) =>
+              article.title &&
+              !article.title.toLowerCase().includes("[removed]")
+          );
+          setNews(filteredNews); 
+        }
+      } catch (error) {
+        console.error("Erro ao inicializar os dados:", error);
+      }
+    };
+
+    initializeData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="relative h-screen w-screen">
+      <div className="absolute top-0 left-0 w-full z-50">
+        <Header />
+      </div>
+      <div className="absolute inset-0 z-10">
+        <MapView  userLocation={userLocation} />
+      </div>
+      <button
+        className="fixed bottom-4 right-4 bg-white bg-opacity-10 text-black font-bold px-4 py-2 rounded shadow-lg hover:bg-white hover:bg-opacity-70 z-50"
+        onClick={() => setIsNewsModalOpen(true)}
+      >
+        Notícias
+      </button>
+      {isNewsModalOpen && (
+        <NewsModal
+          news={news}
+          onClose={() => setIsNewsModalOpen(false)}
+        />
+      )}
     </div>
   );
-}
+};
 
 export default App;

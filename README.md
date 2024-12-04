@@ -1,70 +1,101 @@
-# Getting Started with Create React App
+# **Recreation of the Fogos.pt Website**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React.js-v18-blue)](https://react.dev/)  
+[![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-v3-green)](https://tailwindcss.com/)  
+**University of Aveiro** | **Multimédia e Tecnologias da Comunicação (MTC)**  
+Course: **Tecnologias Avançadas para Client Side (TACS)**  
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **📚 About the Project**
+This project is a recreation of the website [Fogos.pt](https://fogos.pt) with some minor changes and improvements. It was developed as part of the **(TACS)** course within the **Bachelor's (MTC)** at the University of Aveiro.  
 
-### `npm start`
+The main goal was to create a modern and responsive experience using **React.js** and **Tailwind CSS**, integrating external APIs for real-time data and additional customizations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## **🎯 Features**
+- 🗺️ **Interactive visualization of active wildfires on a map** with real-time data.
+- 📰 **Related news** about wildfires directly integrated into the system.
+- 📈 **Detailed information** about each incident (location, size, status, etc.). (SOON)
+- 🌐 **Responsive and modern interface**, built with **Tailwind CSS**.
+- 🛠️ Small changes and improvements compared to the design and usability of the original website.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **🛠️ Technologies Used**
+This project was built using the following tools and technologies:
 
-### `npm run build`
+### **Frontend**
+- **[React.js](https://react.dev/)**: Library for building user interfaces.
+- **[Tailwind CSS](https://tailwindcss.com/)**: Utility-first CSS framework for fast and efficient styling.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **APIs**
+- **[Fogos.pt API](https://fogos.pt)**: For wildfire data in Portugal.
+- **[Geoapify API](https://www.geoapify.com/)**: For geographical information and map manipulation.
+- **[NewsAPI](https://newsapi.org/)**: To integrate news related to wildfires.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### **Maps**
+- **[Leaflet.js](https://leafletjs.com/)**: JavaScript library for interactive map rendering.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## **🚀 How to Run the Project**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **Prerequisites**
+Before starting, make sure you have **Node.js** and **npm** installed on your computer:
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **Steps to Run:**
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/your-repository-name.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd your-repository-name
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+4. Create a `.env` file with your API keys:
+   ```
+   SOON I WILL UPLOAD THE ORIGINAL API DEV FILE
+   ```
+5. Start the development server:
+   ```bash
+   npm start
+   ```
+6. Open your browser and go to:
+   ```
+   http://localhost:3000
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## **📸 Screenshots**
+*Some screenshots soon.*
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## **👩‍💻 Development Team**
+This project was developed by:
+- **[Francisco Padrela](https://p4drela.github.io/)**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## **🔗 Useful Links**
+- [Fogos.pt Website (Original)](https://fogos.pt)
+- [React.js](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Geoapify](https://www.geoapify.com/)
+- [NewsAPI](https://newsapi.org/)
+- [Leaflet.js](https://leafletjs.com/)
+- [University of Aveiro](https://www.ua.pt/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## **📝 License**
+This project was developed for educational purposes only and does not have a commercial license. All rights to the original concept belong to [Fogos.pt](https://fogos.pt).  

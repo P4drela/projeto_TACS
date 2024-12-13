@@ -34,7 +34,7 @@ const NewsModal = ({ news, onClose }) => {
                   />
                 )}
                 <div className="flex flex-col justify-between">
-                  <h3 className="font-bold text-lg border-b-2 ">{article.title}</h3>
+                  <h3 className="font-bold text-lg mb-6 ">{article.title}</h3>
                   <p>{article.summary}</p>
                   <a
                     href={article.url}
@@ -48,7 +48,7 @@ const NewsModal = ({ news, onClose }) => {
               </div>
             ))
           ) : (
-            <p>Não há notícias disponíveis para a sua cidade.</p>
+            <p>Não há notícias disponíveis nesta localização.</p>
           )}
         </div>
       </div>
